@@ -1,4 +1,14 @@
 {{#partial "content"}}
+{{#each endangered}}
+    <div class="well">
+        {{name}}
+        {{age}}
+        {{location}}
+        {{healthStatus}}
+        {{timestamp}}
+        {{type}}
+    </div>
+{{/each}}
 
 {{/partial}}
 {{>layout.hbs}}
