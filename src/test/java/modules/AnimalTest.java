@@ -1,7 +1,18 @@
 package modules;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class AnimalTest {
+    @Test
+    public void animal_instantiatesCorrectly_true(){
+        Animal testAnimal=new Animal("lion");
+        assertEquals(true,testAnimal instanceof Animal);
+    }
+    @Test
+    public void getName_animalInstantiatesWithName_lion(){
+        Animal testAnimal=new Animal("lion");
+        assertEquals("lion",testAnimal.getName());
+    }
 
 }
