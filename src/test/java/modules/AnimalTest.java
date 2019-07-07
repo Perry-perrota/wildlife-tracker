@@ -20,5 +20,11 @@ public class AnimalTest {
         Animal secondAnimal=new Animal("lion");
         assertTrue(firstAnimal.equals(secondAnimal));
     }
+    @Test
+    public void save_insertsAnimalObjectsToDatabase(){
+        Animal testAnimal=new Animal("lion");
+        testAnimal.saveAnimal();
+        assertTrue(Animal.allAnimals().get(0).equals(testAnimal));
+    }
 
 }
