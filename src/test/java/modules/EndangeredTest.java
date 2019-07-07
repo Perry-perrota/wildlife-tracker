@@ -37,7 +37,7 @@ public class EndangeredTest {
         assertEquals("okay",endangered.getHealthStatus());
     }
     public Endangered setupEndangered(){
-        Endangered endangered=new Endangered("lion","zone1","six","adult","steve","okay");
+        Endangered endangered=new Endangered("lion","zone1", "adult","steve","okay");
         return endangered;
     }
     @Test
