@@ -40,4 +40,27 @@ public class EndangeredTest {
         Endangered endangered=new Endangered("lion","zone1","six","adult","steve","okay");
         return endangered;
     }
+    @Test
+    public void equals_returnsTrueIfNamesAreSimilar_true(){
+        Endangered animalOne=setupEndangered();
+        Endangered animalTwo=setupEndangered();
+        assertTrue(animalOne.equals(animalTwo));
+    }
+    @Test
+    public void save_returnsTrueIfArgumentsmatch(){
+        Endangered newEnddangered=setupEndangered();
+        newEnddangered.saveEndangered();
+        assertTrue(Endangered.allEndangered().get(0).equals(newEnddangered));
+    }
+    @Test
+    public void allEndangered_returnsAllInstancesOfEndangered_true(){
+        Endangered newEndangered=setupEndangered();
+        newEndangered.saveEndangered();
+        Endangered secondEndangered=setupEndangered();
+        secondEndangered.saveEndangered();
+        assertEquals(true,Endangered.allEndangered().get(0).equals(newEndangered));
+        assertEquals(true,Endangered.allEndangered().get(1).equals(secondEndangered));
+
+    }
+
 }
