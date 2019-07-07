@@ -14,5 +14,11 @@ public class AnimalTest {
         Animal testAnimal=new Animal("lion");
         assertEquals("lion",testAnimal.getName());
     }
+    @Test
+    public void equals_returnsTrueIfNameMatchesAnother_true(){
+        Animal firstAnimal=new Animal("lion");
+        Animal secondAnimal=new Animal("lion");
+        assertTrue(firstAnimal.equals(secondAnimal));
+    }
 
 }
