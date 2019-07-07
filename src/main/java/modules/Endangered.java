@@ -13,13 +13,14 @@ public class Endangered extends Animal {
     private String rangerName;
     private String healthStatus;
 
-    public Endangered(String name, String location, String time, String age, String rangerName, String healthStatus) {
+    public Endangered(String name, String location, String age, String rangerName, String healthStatus) {
         super(name);
         this.location = location;
         this.time = time;
         this.age = age;
         this.rangerName = rangerName;
         this.healthStatus = healthStatus;
+        this.type="endangered";
     }
 
     @Override
