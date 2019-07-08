@@ -1,22 +1,19 @@
 package modules;
 
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class EndangeredTest {
+    @Rule
+    public DatabaseRule database=new DatabaseRule();
 
 
     @Test
     public void getLocation() {
         Endangered endangered=setupEndangered();
         assertEquals("zone1",endangered.getLocation());
-    }
-
-    @Test
-    public void getTime() {
-        Endangered endangered=setupEndangered();
-        assertEquals("six",endangered.getTime());
     }
 
     @Test
